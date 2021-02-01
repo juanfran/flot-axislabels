@@ -100,10 +100,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         var x, y;
                         if (axisName.charAt(0) == 'x') {
                             x = plot.getPlotOffset().left + plot.width()/2 - width/2;
-                            y = plot.getCanvas().height;
+                            y = plot.getCanvas().height - 3;
                         } else {
                             x = height * 0.72;
-                            y = plot.getPlotOffset().top + plot.height()/2 - width/2;
+                            y = plot.getPlotOffset().top + plot.height()/2 + width/2;
                         }
                         ctx.translate(x, y);
                         ctx.rotate((axisName.charAt(0) == 'x') ? 0 : -Math.PI/2);
